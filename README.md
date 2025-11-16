@@ -28,13 +28,13 @@ where:
 
 The fractional gradient is discretized using **backward Caputo quadrature**:
 
-[
+$$
 {}^{C}!D_x^{\alpha}u(i,j) =
 \frac{1}{\Gamma(2-\alpha)}
 \sum_{m=0}^{i-1}
 \big[(m+1)^{1-\alpha} - m^{1-\alpha}\big];
 \Delta_x^2 u(i-m,j),
-]
+$$
 
 and similarly for the y-direction.
 
