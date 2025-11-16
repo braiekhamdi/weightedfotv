@@ -15,7 +15,7 @@ This solver numerically minimizes the variational model
 
 $$
 \min_{u};
-  \int_{\Omega} \big(-u\,\mathrm{div}^{\alpha} v(x)\big)\,dx + 
+  \int_{\Omega} \big(-u \mathrm{div}^{\alpha} v(x)\big) dx + 
 \lambda \int*{\Omega} \log!\left(1+\frac{(f(x)-u(x))^2}{\gamma^2}\right)dx ,
 $$
 
