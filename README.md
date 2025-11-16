@@ -13,18 +13,18 @@ The code implements the model proposed in our article:
 
 This solver numerically minimizes the variational model
 
-[
+$$
 \min_{u};
   \int_{\Omega} \big(-u\,\mathrm{div}^{\alpha} v(x)\big)\,dx + 
 \lambda \int*{\Omega} \log!\left(1+\frac{(f(x)-u(x))^2}{\gamma^2}\right)dx ,
-]
+$$
 
 where:
 
 * (f) is the observed image corrupted by **impulsive Cauchy noise**,
-* (\nabla^{\alpha,C}) is the **Caputo fractional gradient** of order (1 < \alpha < 2),
-* (w(x)) is a **spatially adaptive weighting map**,
-* (\lambda > 0) and (\gamma>0) are regularization and fidelity parameters.
+* $\nabla^{\alpha,C}$ is the **Caputo fractional gradient** of order $1 < \alpha < 2$,
+* $w(x)$ is a **spatially adaptive weighting map**,
+* $\lambda > 0$ and $\gamma>0$ are regularization and fidelity parameters.
 
 The fractional gradient is discretized using **backward Caputo quadrature**:
 
@@ -36,14 +36,14 @@ The fractional gradient is discretized using **backward Caputo quadrature**:
 \Delta_x^2 u(i-m,j),
 ]
 
-and similarly for the (y)-direction.
+and similarly for the y-direction.
 
 The resulting minimization is solved with:
 
 * **Split Bregman iteration** (outer loop),
 * **Iteratively Reweighted Least Squares (IRLS)** for the Cauchy fidelity,
 * **Matrix-free Preconditioned Conjugate Gradient (PCG)** for the linear subproblem,
-* **Isotropic shrinkage** for the (d)-update.
+* **Isotropic shrinkage** for the d-update.
 
 This framework is efficient, robust to heavy-tailed noise, and well suited for fractional-order regularization.
 
