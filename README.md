@@ -301,8 +301,9 @@ If you use this code or build upon this work, please cite:
 ```bibtex
 @article{braiek2026newweighted,
   author  = {Hamdi Braiek},
-  title   = {A New Weighted Caputo Fractional-Order Total Variation for Cauchy Noise Removal with Bayesian Optimization},
+  title   = {A New Weighted {C}aputo Fractional-Order Total Variation for {C}auchy Noise Removal with {B}ayesian Optimization},
   journal = {The Visual Computer},
+  volume = {42},
   doi     = {10.1007/s00371-026-04524-9},
   year    = {2026}
 }
