@@ -8,7 +8,7 @@ Official MATLAB implementation of the **Weighted Fractional-Order Total Variatio
 
 > **A New Weighted Caputo Fractional-Order Total Variation for Cauchy Noise Removal with Bayesian Optimization**  
 > Hamdi Braiek  
-> *The Visual Computer*, 2026  
+> *The Visual Computer*, Vol 42, Num 9, 2026  
 > DOI: [10.1007/s00371-026-04524-9](https://doi.org/10.1007/s00371-026-04524-9)
 
 ---
@@ -34,7 +34,7 @@ Official MATLAB implementation of the **Weighted Fractional-Order Total Variatio
 
 Image denoising under **Cauchy noise** is a challenging problem because the Cauchy distribution has heavy tails, undefined variance, and cannot be handled reliably by classical Gaussian-based methods. This repository proposes a novel variational framework that addresses this challenge through three integrated mechanisms:
 
-1. **Weighted Caputo fractional-order total variation (FOTVᵅw)** — a spatially adaptive regularizer formulated in the Caputo sense (fractional order $1 < \alpha \leq 2$), generalizing both classical TV and unweighted FOTV.
+1. **Weighted Caputo fractional-order total variation ($\text{FOTV}^\alpha_w$)** — a spatially adaptive regularizer formulated in the Caputo sense (fractional order $1 < \alpha < 2$), generalizing both classical TV and unweighted FOTV.
 2. **Nonconvex Cauchy data-fidelity term** — derived from the Cauchy log-likelihood, robust to impulsive outliers.
 3. **Bayesian Optimization (BO)** — automated, data-driven hyperparameter selection based on PSNR, eliminating the need for manual tuning.
 
@@ -56,7 +56,7 @@ The resulting nonsmooth, nonconvex energy is minimized efficiently using a **Spl
 
 ### Variational Energy
 
-For an observed noisy image `$f = u + \eta$`, with `$\eta \~ Cauchy(0, \gamma)$`, the model minimizes:
+For an observed noisy image $f = u + \eta$, with $\eta \~ Cauchy(0, \gamma)$, the model minimizes:
 
 $$\min_u  \text{FOTV}^\alpha_w(u)  +  \lambda \int_\Omega \log(1 + (f(x) - u(x))^2 / \gamma^2) dx$$
 
